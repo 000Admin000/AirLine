@@ -1,0 +1,910 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	color: #000;
+	line-height: 1;
+	/* user-select: none; */
+}
+.overflow {
+	overflow-y: hidden;
+}
+.btn {
+	border-radius: 5px;
+	transition: .4s;
+	cursor: pointer;
+	user-select: none;
+}
+.btn:active {
+	transform: scale(0.9);
+	transition: .2s;
+}
+/* .progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 4px;
+	background-color: tomato;
+	z-index: 101;
+}
+.up-but {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	bottom: 50px;
+	right: 50px;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+	z-index: 100;
+}
+.fa-arrow-up {
+	color: #121212;
+} */
+.block {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.wrapper {
+	min-height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.container {
+	position: relative;
+	z-index: 1;
+	min-height: 100%;
+	height: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+/*  header-start  */
+
+header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.header-inner {
+	width: 100%;
+	padding: 30px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+/* .header-block-logo {
+
+}
+.header-block-menu {
+
+} */
+.menu-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.menu-item {
+	position: relative;
+	margin: 0 10px;
+}
+.menu-item::before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.25s;
+}
+.menu-item:hover:before {
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.25s;
+}
+.menu-item a {
+	color: #000;
+	font-family: "Poppins";
+	font-size: 16px;
+	font-weight: 500;
+}
+.sign-btn {
+	font-family: 'Poppins';
+	font-size: 14px;
+	font-weight: 500;
+	padding: 8px 20px;
+	background-color: #656293;
+	color: #fff;
+}
+
+
+
+/*  header-end  */
+/*  --------------------------------------------------------------  */
+/*  main-start  */
+
+/* .main {
+
+} */
+.main-wrap-block-1 {
+	position: relative;
+	width: 100%;
+	height: 750px;
+	background-image: url(../img/wing-airplane-background.jpg);
+	background-size: cover;
+	margin-bottom: 250px;
+}
+.blur {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(234, 247, 246, 0.6);
+}
+.main-inner-block-1-text {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}	
+.block-1-text-titel {
+	width: 100%;
+	max-width: 587px;
+	font-family: 'Roboto';
+	font-size: 66px;
+	font-weight: 400;
+	color: #151515;
+}
+.block-1-text-titel span {
+	text-transform: uppercase;
+	font-family: 'Roboto';
+	font-size: 66px;
+	font-weight: 700;
+	color: #656293;
+}
+.block-1-text-link {
+	font-size: 16px;
+	font-weight: 500;	
+	color: #000;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+}
+.block-1-text-link:hover {
+	text-decoration: underline;
+}
+.block-1-text-link i {
+	font-size: 24px;
+	color: #000;
+}
+.main-inner-block-1-flights-book {
+	position: relative;
+	min-height: 266px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: #fff;
+	box-shadow: 0px 30px 84px 0px #130A2E14;
+	border-radius: 10px;
+	transform: translateY(-50%);
+	padding: 25px;
+	margin: 0 auto;
+}
+.block-1-flights-info {
+	display: flex;
+	flex-direction: row;
+}
+.flights-info-box {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 600;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.flights-info-box i {
+	font-size: 24px;
+}
+.block-1-flights-date {
+	display: flex;
+	flex-direction: row;
+}
+.flights-date-block {
+	max-width: 300px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	border: 1px solid rgba(104, 101, 101, 0.5);
+	border-radius: 10px;
+}
+.flights-date-box-change-btn {
+	width: 28px;
+	height: 28px;
+	margin: auto 5px;
+	cursor: pointer;
+}
+.flights-date-box-change-btn img {
+	min-width: 100%;
+	min-height: 100%;
+}
+.date-box-direction,
+.date-box-direction-line,
+.flights-date-box-departure,
+.flights-date-box-return,
+.flights-date-box-btn,
+.flights-date-box-btn-prev,
+.flights-date-box-btn-next {
+	font-size: 14px;
+	font-weight: 500;
+	color: #15151599;
+}
+.date-box-direction-name,
+.flights-date-box-time {
+	font-size: 24px;
+	font-weight: 600;
+	color: #151515;
+	margin: 10px 0;
+}
+.date-box-direction-name,
+.flights-date-box-time {
+	cursor: pointer;
+}
+.flights-date-box-time {
+	display: flex;
+	align-items: center;
+}
+.flights-date-box-time img {
+	margin-left: 20px;
+}
+.flights-date-blocks {
+	max-width: 380px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	border: 1px solid rgba(104, 101, 101, 0.5);
+	border-radius: 10px;
+	margin-left: 30px;
+}
+.flights-date-block-1 {
+	margin-right: 20px;
+}
+/* .flights-date-block-2 {
+
+} */
+.flights-date-box-btn {
+	display: flex;
+	flex-direction: row;
+}
+.flights-date-box-btn-prev {
+	margin-right: 10px;
+}
+.flights-date-box-btn-prev,
+.flights-date-box-btn-next {
+ cursor: pointer;
+}
+/* .block-1-flights-requirements {
+} */
+.flights-requirements-btn {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.block-1-btn {
+	position: absolute;
+	bottom: -34px;
+	left: calc(50% - 115px);
+	max-width: 230px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background: #656293;
+	color: #fff;
+	border-radius: 10px;
+	padding: 25px 20px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.block-1-btn i {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+.main-wrap-block-2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.block-2-titel {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 100px;
+	}
+.main-inner-block-2-info-1,
+.main-inner-block-2-info-2 {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.main-inner-block-2-info-1 {
+	margin-bottom: 150px;
+}
+.main-inner-block-2-info-2 {
+	flex-direction: row-reverse;
+	margin-bottom: 150px;
+}
+.block-2-image-1::before {
+	z-index: -1;
+	position: absolute;
+	top: -65px;
+	left: -200px;
+	content: '';
+	width: 520px;
+	height: 520px;
+	border-radius: 10px;
+	background-color: rgba(229, 244, 246, 0.8);
+}
+.block-2-image-2::after {
+	z-index: -1;
+	position: absolute;
+	top: -65px;
+	right: -200px;
+	content: '';
+	width: 520px;
+	height: 520px;
+	border-radius: 10px;
+	background-color: rgba(229, 244, 246, 0.8);
+}
+.block-2-image-1,
+.block-2-image-2 {
+	min-width: 590px;
+	height: 390px;
+}
+.block-2-image-1 img,
+.block-2-image-2 img {
+	width: 100%;
+	height: 100%;
+}
+.block-2-image-1 {
+	margin-right: 40px;
+}
+.block-2-image-2 {
+	margin-left: 40px;
+}
+.block-2-text {
+	display: flex;
+	flex-direction: column;
+}
+.block-2-text-titel {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.block-2-text-text {
+	font-size: 16px;
+	font-weight: 400;
+	text-align: justify;
+	color: #15151599;
+	line-height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+.main-wrap-block-3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.main-inner-block-3-cards-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.block-3-titel {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 80px;
+}
+.main-block-3-cards-block-1,
+.main-block-3-cards-block-3 {
+	display: flex;
+	flex-direction: column;
+}
+.main-block-3-cards-block-2 {
+	display: flex;
+	align-items: center;
+}
+.block-3-card {
+	max-width: 370px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 40px;
+	box-shadow: 0px 30px 84px 0px #130A2E14;
+	border-radius: 15px;
+	margin-bottom: 30px;
+}
+.block-3-card-icon {
+	max-width: 55px;
+	max-height: 55px;
+}
+.block-3-airplane-icon {
+	max-width: 330px;
+	max-height: 300px;
+}
+.block-3-card-icon img,
+.block-3-airplane-icon img {
+	width: 100%;
+	height: 100%;
+}
+.block-3-card-titel {
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	margin: 10px 0;
+}
+.block-3-card-text {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+}
+
+
+
+
+
+
+.main-wrap-block-4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 50px;
+}
+.block-4-titel {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.main-inner-block-4-imgcards-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.block-4-imgcard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 0px 30px 84px 0px #130A2E14;
+}
+.block-4-card-img {
+	max-width: 230px;
+	max-height: 190px;
+	margin-bottom: 20px;
+}
+.block-4-card-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.block-4-card-text {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+.main-wrap-block-5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 50px;
+}
+.block-5-titel {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 80px;
+}
+.main-inner-block-5-cards-block {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.block-5-card {
+	width: 100%;
+	background: #F5F5F5;
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	margin: 0 20px;
+}
+.block-5-card:nth-child(1) {
+	max-width: 400px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.block-5-card:nth-child(2) {
+	max-width: 380px;
+	border-radius: 10px;
+	background-color: #656293;
+	transform: translateY(-30px);
+}
+.block-5-card:nth-child(3) {
+	max-width: 400px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.block-5-card-titel {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.block-5-card:nth-child(2) .block-5-card-titel {
+	color: #fff;
+}
+.block-5-card-undertitel {
+	font-size: 22px;
+	font-weight: 400;
+	color: #A9A9AA;
+	margin-bottom: 15px;
+}
+/* .block-5-card-list {
+
+} */
+.block-5-card-item {
+	font-size: 16px;
+	font-weight: 500;
+	color: #151515;
+	margin-bottom: 15px;
+}
+.block-5-card:nth-child(2) .block-5-card-item {
+	color: #fff;
+}
+.block-5-card-item i {
+	margin-right: 5px;
+}
+.block-5-card:nth-child(2) .block-5-card-item i {
+	color: #fff;
+}
+.block-5-card-border {
+	height: 1px;
+	width: 100%;
+	border-bottom: 1px dashed #A9A9AA;
+	margin-bottom: 60px;
+}
+.block-5-card-price {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+.block-5-card:nth-child(2) .block-5-card-price {
+	color: #fff;
+}
+.block-5-card-price span {
+	font-size: 18px;
+	font-weight: 400;
+}
+.block-5-card:nth-child(2) .block-5-card-price span {
+	color: #fff;
+}
+.block-5-card-btn {
+	max-width: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #656293;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.block-5-card:nth-child(2) .block-5-card-btn {
+	background: #fff;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+.main-wrap-block-6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.block-6 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.block-6-airplain-big-img {
+	max-width: 750px;
+	height: auto;
+	transform: translateX(50px);
+}
+.block-6-airplain-big-img img {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*  main-end  */
+/*  --------------------------------------------------------------  */
+/*  footer-start  */
+
+
+
+.footer {
+	width: 100%;
+	background-color: #656293;
+}
+.footer-wrap {
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+
+}
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer-logo {
+	max-width: 140px;
+	margin-top: 25px;
+}
+.footer-logo img {
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+.footer-line {
+	height: 1px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	margin: 20px 0;
+}
+.footer-block {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.footer-list {
+	display: flex;
+	flex-direction: row;
+}
+.footer-item {
+	margin-right: 10px;
+} 
+.footer-item a {
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFFFFFB2;
+} 
+.copyright {
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFFFFFB2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  footer-end  */
+.tracking-in-expand {
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 200ms both;
+}
+
+
+@keyframes tracking-in-expand {
+	0% {
+	  letter-spacing: -0.5em;
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0.6;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
+
+  
+
+.text-focus-in {
+	animation: text-focus-in .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+	0% {
+	  filter: blur(12px);
+	  opacity: 0;
+	}
+	100% {
+	  filter: blur(0px);
+	  opacity: 1;
+	}
+  }
+  
+
+/*--------------------------------------------------------------*/
+
+
+  .progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 4px;
+	background-color: tomato;
+	z-index: 101;
+}
+
+
+.up-but {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	bottom: 50px;
+	right: 50px;
+	border-radius: 50%;
+	background: tomato;
+	cursor: pointer;
+	z-index: 100;
+}
+.fa-arrow-up {
+	color: #F5F5F5;
+}
+
+
+@media screen and (max-width: 991px) {
+	.up-but {
+		bottom: 30px;
+		right: 30px;
+	}
+	/* .burger-menu {
+		position: relative;
+		min-width: 40px;
+		height: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		margin: 20px;
+		z-index: 999;
+	}
+	.burger-menu span {
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background-color: #fff;
+		transition: 0.4s;
+		border-radius: 10px;
+		margin: 10px 0;
+	}
+	.burger-menu span:nth-child(1) {
+		top: -5px;
+	}
+	.burger-menu span:nth-child(3) {
+		bottom: -5px;
+	}
+	.burger-active span:nth-child(2){
+		display: none;
+	}
+	.burger-active span:nth-child(1){
+		top: 8px;
+		transform: rotate(45deg);
+	}
+	.burger-active span:nth-child(3){
+		bottom: 8px;
+		transform: rotate(-45deg);
+	}
+	 */
+}
+
+
+/*--------------------------------------------------------------*/
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
